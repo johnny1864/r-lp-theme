@@ -1,0 +1,15 @@
+.full-width-image-content-blocks {
+    padding: 0;
+    &__wrapper {
+        max-width: 650px;
+        margin: 0 auto;
+
+        hr {
+            border-color: $teal;
+        }
+
+        @media screen and (min-width: $laptop) {
+            max-width: unset;
+        }
+    }
+}

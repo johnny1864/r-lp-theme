@@ -1,0 +1,30 @@
+.image-content-blocks {
+    .section-header {
+        margin-bottom: 1.5rem;
+        @media screen and (min-width: $desktop) {
+            width: 60%;
+            margin: 0 auto 3rem;
+            font-size: 1.5rem;
+        }
+    }
+    &__block {
+        margin-bottom: 1.5rem;
+
+        &--image {
+            margin-bottom: 1rem;
+        }
+
+        @media screen and (min-width: $laptop) {
+            .col {
+                &--image {
+                    width: 45%
+                }
+
+                &--content {
+                    width: 55%
+                }
+            }
+        }
+    }
+
+}

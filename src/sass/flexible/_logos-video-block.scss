@@ -1,0 +1,21 @@
+.logos-video-section {
+    .logos-slider {
+        .swiper-slide {
+            height: auto;
+        }
+    }
+
+    .video-section {
+        &__iframe {
+            aspect-ratio: 16/9;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+

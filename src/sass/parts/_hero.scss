@@ -1,0 +1,52 @@
+.hero {
+    background-size: cover;
+    background-position: center;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color: $xdgray, $alpha: 0.3);
+    }
+
+    .container {
+        padding: 3rem 0 0;
+        @media screen and (min-width: $laptop) {
+            max-width: 960px;
+        }
+    }
+
+    h1 {
+        color: $white;
+    }
+
+    &__content {
+        margin-top: 1.5rem;
+        color: $white;
+        @media screen and (min-width: $desktop) {
+            font-size: 1.4rem;
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .svg-icon {
+        &--curve {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: translateY(65%);
+            width: 100%;
+            height: auto;
+
+            .positioner {
+                position: relative;
+            }
+        }
+    }
+}
