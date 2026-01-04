@@ -2,6 +2,7 @@
     z-index: 10;
     margin: 0;
     background-color: $teal;
+    
 
     .container {
         display: flex;
@@ -17,6 +18,7 @@
     &__logo {
         z-index: 100;
         max-width: 180px;
+        transition: max-width ease 400ms;
     }
 
     &.sticky {
@@ -27,11 +29,14 @@
         z-index: 999;
         border-bottom: 1px solid transparent;
         transition: background .15s ease, box-shadow .15s ease, border-color .15s ease;
+        box-shadow: 50px 0 50px rgba($color: $teal, $alpha: 0.80);
 
         &--scrolled {
             @include box-shadow;
             margin: 0;
-        
+            .gheader__logo {
+                max-width: 150px;
+            }
         }
     }
 }

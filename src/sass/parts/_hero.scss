@@ -1,6 +1,31 @@
 .hero {
     background-size: cover;
     background-position: center;
+    overflow: visible;
+
+    @media screen and (max-width: $tablet) {
+        padding-bottom: 0;
+    }
+
+    &__wrapper {
+        overflow: hidden;
+    }
+
+    &__float-image {
+        position: relative;
+        z-index: 5;
+        img {
+            width: 100%;
+        }
+
+        @media screen and (min-width: $laptop) {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translateY(40%);
+            width: 30%;
+        }
+    }
 
     &::before {
         content: "";
@@ -15,6 +40,9 @@
 
     .container {
         padding: 3rem 0 0;
+        z-index: 2;
+        line-height: 1.2;
+
         @media screen and (min-width: $laptop) {
             max-width: 960px;
         }
@@ -27,6 +55,7 @@
     &__content {
         margin-top: 1.5rem;
         color: $white;
+
         @media screen and (min-width: $desktop) {
             font-size: 1.4rem;
             width: 75%;
@@ -48,5 +77,71 @@
                 position: relative;
             }
         }
+    }
+
+    &__usps {
+        background-color: $green;
+        padding: 5rem 0 1.5rem;
+
+        @media screen and (min-width: $tablet) {
+            padding: 1rem 0 3rem;
+        }
+
+        @media screen and (min-width: $laptop) {
+            .container {
+                max-width: 1000px;
+            }
+        }
+
+        &--block {
+            margin-bottom: 1rem;
+            color: $white;
+            padding: 1rem;
+
+            @media screen and (min-width: $laptop) {
+                width: calc(33% - 3rem);
+                margin: 0 1.5rem;
+            }
+        }
+
+        &--icon {
+            margin-bottom: 0.5rem;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+
+        &--text {
+            text-transform: uppercase;
+            text-wrap: balance;
+
+            @media screen and (min-width: $laptop) {
+                font-size: 1.25rem;
+                // width: 80%;
+                margin: 0 auto;
+            }
+        }
+
+        .svg-icon {
+            &--bottom-curve {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                transform: translateY(65%);
+                width: 100%;
+                height: auto;
+
+                @media screen and (min-width: $laptop) {
+                    transform: translateY(80%);
+                }
+
+                .positioner {
+                    position: relative;
+                }
+            }
+        }
+
+
     }
 }
