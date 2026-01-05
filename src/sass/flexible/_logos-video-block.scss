@@ -1,4 +1,22 @@
 .logos-video-section {
+    position: relative;
+
+    .svg-icon {
+        &--wave {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateY(-15%);
+            width: 100%;
+            height: auto;
+            z-index: -1;
+
+            .positioner {
+                position: relative;
+            }
+        }
+    }
+
     .logos-slider {
         .swiper-slide {
             height: auto;
@@ -6,8 +24,17 @@
     }
 
     .video-section {
+        &__title {
+            color: $white;
+            margin-bottom: 1.5rem;
+        }
+
         &__iframe {
             aspect-ratio: 16/9;
+            border-radius: 35px;
+            overflow: hidden;
+
+            img,
             iframe {
                 position: absolute;
                 top: 0;
@@ -16,6 +43,18 @@
                 width: 100%;
             }
         }
+
+        &__play {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+
+            .svg-code {
+                height: 4rem;
+                width: 4rem;
+            }
+        }
     }
 }
-

@@ -41,7 +41,7 @@ $border-radius: 2rem;
 //---------------------------------------------
 $input_border_width: 2px;
 $input_border_radius: $border-radius;
-$input_inactive: $xlgray;
+$input_inactive: transparent;
 $input_active: $info;
 $input_filled: $black;
 $input_error: $error;
@@ -80,7 +80,7 @@ $thick: 900;
 $link_color: $info;
 
 // Headings
-$heading_color: currentColor;
+$heading_color: $teal;
 $heading_font: $sans;
 $heading_weight: $bold;
 

@@ -559,6 +559,25 @@ jQuery(document).ready(function ($) {
     });
   })();
 
+  var PlayVideo = (function(){
+    const playBtn = $('.video-section .video-embed__play');
+
+    if(!playBtn.length) return;
+
+    playBtn.on('click', function() {
+      const iframeWrapper = $(this).closest('.video-section__iframe').find('.iframe-holder');
+      $(this).closest('.video-section__iframe').addClass('active');
+      $(this).closest('.video-section__iframe').find('img').fadeOut();
+      $(this).hide();
+  
+      const iframeCode = `<iframe title="YouTube video player" src="https://www.youtube.com/embed/6bbKyavnmtc?si=wOqEeirjseRU_Y3s?autoplay=1&mute=0" allow="autoplay" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>`;
+
+      iframeWrapper.replaceWith(iframeCode);
+
+    });
+
+  }())
+
   var LoadMore = (function () {
     var $loadmore = $("#loadmore");
 

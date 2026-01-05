@@ -37,6 +37,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <?php wp_head(); ?>
 
     <script>var ajaxURL = "<?php echo esc_url( home_url( '/' ) ) . 'wp-admin/admin-ajax.php' ?>";</script>
@@ -46,6 +47,6 @@
 <body id="top" <?php body_class(); ?>>
     <?php echo get_field('body_scripts_top', 'option'); ?>
     <?php include locate_template( 'lib/layout/header.php' ); ?>
-    <?php include locate_template( 'lib/parts/hero.php' ); ?>
-
+    
     <main>
+        <?php include locate_template( 'lib/parts/hero.php' ); ?>

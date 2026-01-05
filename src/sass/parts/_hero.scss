@@ -2,6 +2,7 @@
     background-size: cover;
     background-position: center;
     overflow: visible;
+    margin-top: 0 !important;
 
     @media screen and (max-width: $tablet) {
         padding-bottom: 0;
@@ -22,7 +23,7 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            transform: translateY(40%);
+            transform: translate(10%, 45%);
             width: 30%;
         }
     }

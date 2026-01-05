@@ -7,17 +7,18 @@ $attr = buildAttr( array( 'id' => $id, 'class' => $classList ) );
 
 <?php if ( $blocks ) : ?>
 	<section <?php echo $attr; ?>>
-		
+			
 			<div class="full-width-image-content-blocks__wrapper">
 				<?php foreach ( $blocks as $index => $block ) : ?>
+					<div class="container">
+						<hr>
+					</div>
 					<div class="full-width-image-content-blocks__block">
-                        <div class="container">
-                            <hr>
-                        </div>
+                        
 						<div class="lg:flex items-center <?php if ( $index%2 == 0 )
 							echo 'lg:flex-row-reverse'; ?>">
 							<div class="col col--image">
-								<div class="full-width-image-content-blocks__block--image">
+								<div class="full-width-image-content-blocks__image">
 									<?php
                                      $image = $block['image'];
                                      if ( ! empty( $image ) ) : 
