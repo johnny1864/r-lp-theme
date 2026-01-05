@@ -10,7 +10,6 @@ $attr = buildAttr( array( 'id' => $id, 'class' => $classList ) );
 
 <?php if ( $blocks ) : ?>
 	<section <?php echo $attr; ?>>
-		
 		<div class="container">
             <div class="section-header">
                 <div class="section-header__content text-center">

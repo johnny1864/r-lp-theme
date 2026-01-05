@@ -539,7 +539,7 @@ jQuery(document).ready(function ($) {
   var LogoSlider = (function () {
     var logos = $("logos-slider");
     new Swiper(".logos-slider.swiper", {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 24,
       loop: true,
       pagination: true,
@@ -547,7 +547,9 @@ jQuery(document).ready(function ($) {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-
+      pagination: {
+        el: ".swiper-pagination",
+      },
       breakpoints: {
         640: {
           slidesPerView: 3,
@@ -632,4 +634,6 @@ jQuery(document).ready(function ($) {
       });
     });
   })();
+
+   AOS.init();
 });

@@ -18,7 +18,20 @@
                 }
 
                 &--image {
-                    width: 45%;
+                    width: 35%;
+                    align-self: stretch;
+                }
+            }
+        }
+
+        @media screen and (min-width: $laptop) {
+            .col {
+                &--content {
+                    width: 65%;
+                }
+
+                &--image {
+                    width: 35%;
                     align-self: stretch;
                 }
             }
@@ -32,22 +45,28 @@
     }
 
     &__image {
+        img {
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
         @media screen and (min-width: $laptop) {
             position: relative;
             height: 100%;
             width: 100%;
 
             img {
-                position: absolute;
+                aspect-ratio: 13 / 19;
+                //position: absolute;
                 inset: 0;
                 height: 100%;
                 width: 100%;
-                object-fit: cover;
+                aspect-ratio: unset;
             }
         }
     }
 
     &__content {
+        padding: 1.5rem;
         @media screen and (min-width: $laptop) {
             padding: calc(100vw * 0.05);
         }

@@ -6,10 +6,15 @@
             position: absolute;
             left: 0;
             top: 0;
-            transform: translateY(-15%);
+            transform: translateY(-20%);
             width: 100%;
             height: auto;
             z-index: -1;
+
+            @media screen and (max-width: $tablet) {
+                width: 200%;
+                transform: scale(1.5);
+            }
 
             .positioner {
                 position: relative;
@@ -18,8 +23,23 @@
     }
 
     .logos-slider {
+        --swiper-theme-color: #fff;
+        padding: 1.5rem 2rem;
         .swiper-slide {
             height: auto;
+        }
+
+        .swiper-button-next {
+            right: 0;
+        }
+
+        .swiper-button-prev {
+            left: 0;
+        }
+
+        .swiper-pagination {
+            
+            bottom: 0;
         }
     }
 

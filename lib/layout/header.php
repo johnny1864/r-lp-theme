@@ -30,10 +30,12 @@
 			?>
             </nav> -->
 
-            <button type="button" class="menu-burger" title="Menu">
-                <span class="menu-burger__text">Menu</span>
-                <span class="menu-burger__icon"><span></span></span>
-            </button>
+            <a class="btn btn--secondary desk-only" href="#form-block">
+                <img src="http://linen-hare-191650.hostingersite.com/wp-content/uploads/2026/01/robicon.webp" alt="">
+                <span>
+                    Get Started
+                </span>
+            </a>
 
         </div>
     </div>

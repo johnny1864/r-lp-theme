@@ -15,6 +15,9 @@
     &__float-image {
         position: relative;
         z-index: 5;
+        width: 80%;
+        margin: 0 auto;
+
         img {
             width: 100%;
         }
@@ -23,8 +26,13 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            transform: translate(10%, 45%);
+            transform: translate(15%, 45%);
             width: 30%;
+            margin: unset;
+        }
+
+        @media screen and (min-width: $desktop) {
+            transform: translate(10%, 45%);
         }
     }
 
@@ -46,18 +54,30 @@
 
         @media screen and (min-width: $laptop) {
             max-width: 960px;
+            padding: 3rem 0 4rem;
+        }
+
+        @media screen and (min-width: $desktop_lg) {
+            padding: 4rem 0 5rem
         }
     }
 
     h1 {
+        position: relative;
         color: $white;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 3.25rem;
+        }
     }
 
     &__content {
+        position: relative;
         margin-top: 1.5rem;
         color: $white;
+        font-weight: 500;
 
-        @media screen and (min-width: $desktop) {
+        @media screen and (min-width: $laptop) {
             font-size: 1.4rem;
             width: 75%;
             margin-left: auto;
@@ -80,15 +100,27 @@
         }
     }
 
+    &__shadow {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: auto;
+        opacity: 0.5;
+    }
+
     &__usps {
         background-color: $green;
-        padding: 5rem 0 1.5rem;
+        padding: 1.5rem 0 1.5rem;
 
         @media screen and (min-width: $tablet) {
             padding: 1rem 0 3rem;
         }
 
         @media screen and (min-width: $laptop) {
+            padding-top: 0;
+
             .container {
                 max-width: 1000px;
             }
@@ -100,13 +132,25 @@
             padding: 1rem;
 
             @media screen and (min-width: $laptop) {
-                width: calc(33% - 3rem);
+                width: calc(30% - 3rem);
                 margin: 0 1.5rem;
             }
         }
 
         &--icon {
             margin-bottom: 0.5rem;
+
+            @media screen and (min-width: $laptop) {
+                height: 170px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    max-height: 100%;
+                    width: auto;
+                    max-width: 100%;
+                }
+            }
 
             img {
                 margin: 0 auto;
@@ -116,6 +160,8 @@
         &--text {
             text-transform: uppercase;
             text-wrap: balance;
+            font-weight: bold;
+            line-height: 1.1;
 
             @media screen and (min-width: $laptop) {
                 font-size: 1.25rem;

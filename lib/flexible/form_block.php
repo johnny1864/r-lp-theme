@@ -7,7 +7,7 @@ $form_shortcode = get_sub_field('form_shortcode');
 $attr = buildAttr( array( 'id' => $id, 'class' => $classList ) );
 ?>
 
-<section <?php echo $attr; ?>>
+<section id="form-block" <?php echo $attr; ?>>
     <?php if($bg_image) : ?>
         <div class="form-block__bg-image">
         <?php echo getIMG($bg_image['ID'], "xxl"); ?>

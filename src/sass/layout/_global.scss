@@ -184,6 +184,11 @@ h6, .h6 {
     }
 }
 
+h1, .h1,
+h2, .h2 {
+    line-height: 0.9;
+}
+
 
 h1, .h1 {
     font-size: $heading_h1__mobile;
@@ -290,6 +295,16 @@ a {
         &:hover {
             background: transparent;
             color: $black;
+        }
+    }
+
+    &--secondary {
+        background-color: $white;
+        color: $black;
+        
+        &:hover {
+            background-color: $orange;
+            color: $white;
         }
     }
 
@@ -477,4 +492,8 @@ code {
         background: $black;
         color: $white;
     }
+}
+
+p {
+    font-weight: 500;
 }
