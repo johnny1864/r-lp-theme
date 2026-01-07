@@ -3,27 +3,34 @@ $logos = get_sub_field( 'logos' );
 $heading = get_sub_field('heading');
 $video_iframe = get_sub_field('video_iframe');
 $cover_image = get_sub_field('video_cover_image');
+$cta = get_sub_field('cta');
 $attr = buildAttr( array( 'id' => $id, 'class' => $classList ) );
 ?>
 
 <div <?php echo $attr; ?>> 
-    <?php echo getSVG('wave'); ?>
+    <div class="wave-mobile md:hidden">
+        <?php echo getSVG('mobile-wave'); ?>
+    </div>
+    <div class="wave-hide-mobile hidden md:block">
+        <?php echo getSVG('wave'); ?>
+    </div>
     <?php if ( $logos ) : ?>  
-        <div class="container">
+        <div class="container logos-slider__wrapper relative">
             <div class="logos-slider swiper">
                 <div class="swiper-wrapper">
                     <?php foreach ( $logos as $logo ) : ?>
                         <div class="swiper-slide">
-                            <div class="flex justify-center items-center h-full">
+                            <div class="flex justify-center items-center h-full logos-slider__logo">
                             <?php echo getIMG( $logo['ID'] ); ?>
                             </div>
                         </div>
                     <?php endforeach; ?>
                 </div>
                 <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div>
+            
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     <?php endif; ?>
 
@@ -37,16 +44,28 @@ $attr = buildAttr( array( 'id' => $id, 'class' => $classList ) );
 
         <?php if(!empty($video_iframe)) : ?>
             <div class="video-section__iframe video-embed relative">
-                <?php // echo $video_iframe; ?>
+                <?php echo $video_iframe; ?>
 
                 <?php if($cover_image) : ?>
-                    <?php echo getIMG($cover_image['ID']); ?>
+                    <?php // echo getIMG($cover_image['ID']); ?>
                 <?php endif; ?>
-                <button class="video-embed__play video-section__play" aria-label="Play Video">
+                <!-- <button class="video-embed__play video-section__play" aria-label="Play Video">
                     <?php echo getSVG('play', false, false); ?> 
-                </button>            
+                </button>             -->
             </div>
         <?php endif; ?>
+
+        <?php if ( ! empty( $cta ) ) : ?>
+                <div class="text-center video-section__cta">
+                    <a
+                        class="btn"
+                        href="<?php echo esc_url( $cta['url'] ); ?>"
+                        target="<?php echo esc_attr( $cta['target'] ); ?>"
+                    >
+                        <?php echo esc_html( $cta['title'] ); ?>
+                    </a>
+                </div>
+            <?php endif; ?>
         
      </div>
     </section>

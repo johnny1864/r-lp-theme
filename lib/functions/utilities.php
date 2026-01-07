@@ -102,7 +102,7 @@
     function getSocialLinks($socials = null){
         if(is_null($socials)) $socials = get_field('global', 'option')['contact']['socials'];
         
-        $social_icons = array('facebook', 'instagram', 'linkedin', 'pinterest', 'tiktok', 'twitter', 'yelp', 'youtube', 'x');
+        $social_icons = array('twitter', 'facebook', 'instagram', 'linkedin', 'pinterest', 'tiktok',  'yelp', 'youtube', 'x');
 
         if(!empty($socials)) {
             $html = '<nav class="social-links"><ul>';
@@ -132,8 +132,8 @@
         $page_title = get_the_title();
 
         $shareLinks = array(
-            'facebook' => 'https://www.facebook.com/sharer/sharer.php?u='.$page_url,
             'twitter' => 'https://twitter.com/intent/tweet?url='.$page_url.'&text='.$page_title,
+            'facebook' => 'https://www.facebook.com/sharer/sharer.php?u='.$page_url,
             'linkedin' => 'https://www.linkedin.com/shareArticle?mini=true&url='.$page_url.'&title='.$page_title.'&summary='.$page_title.'%0A'.$page_url,
             'pinterest' => 'https://www.pinterest.com/pin/create/button/?url='.$page_url.'&media='.$page_img.'&description='.$page_title.'%0A'.$page_url,
             'email' => 'mailto:?subject='.$page_title.'&body='.$page_title.'%0A'.$page_url

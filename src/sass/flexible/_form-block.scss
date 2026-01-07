@@ -31,8 +31,14 @@
             padding-top: 10rem;
         }
 
+        @media screen and (min-width: $desktop) {
+            padding-top: 14rem;
+            font-size: 1.4rem;
+        }
+
         .section-title {
             color: $white;
+            margin-bottom: 1rem;
         }
     }
 

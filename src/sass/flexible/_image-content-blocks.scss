@@ -1,4 +1,8 @@
 .image-content-blocks {
+    @media screen and (max-width: $laptop - 1) {
+        overflow: visible;
+        padding-top: 0;
+    }
     .section-header {
         position: relative;
         z-index: 2;
@@ -25,16 +29,29 @@
 
     &__float-image {
         position: absolute;
-        width: 33%;
-        top: 0;
-        left: 0;
-        transform: translate(-50%, -60%);
+
         @media screen and (min-width: $laptop) {
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -60%);
             width: 25%;
         }
+
         @media screen and (min-width: $desktop_lg) {
             width: 33%;
             transform: translate(-80%, -70%);
+        }
+
+        @media screen and (max-width: $laptop - 1) {
+            &--top {
+                position: relative;
+                width: 100%;
+                max-width: 280px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: -140px;
+                margin-bottom: 1rem;
+            }
         }
     }
 

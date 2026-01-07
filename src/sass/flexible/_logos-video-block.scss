@@ -1,7 +1,9 @@
 .logos-video-section {
     position: relative;
 
+    
     .svg-icon {
+        &--mobile-wave,
         &--wave {
             position: absolute;
             left: 0;
@@ -11,36 +13,74 @@
             height: auto;
             z-index: -1;
 
-            @media screen and (max-width: $tablet) {
-                width: 200%;
-                transform: scale(1.5);
-            }
-
             .positioner {
                 position: relative;
             }
         }
+
+        &--mobile-wave {
+            transform: translateY(-10%);
+        }
     }
 
     .logos-slider {
-        --swiper-theme-color: #fff;
-        padding: 1.5rem 2rem;
-        .swiper-slide {
-            height: auto;
+
+        padding: 1.5rem 0 2.5rem;
+
+
+        &__wrapper {
+            --swiper-theme-color: #fff;
+            --swiper-pagination-bullet-inactive-color: #fff;
+            padding: 0 2rem;
+            width: 90%;
+
+            .swiper-button-next {
+                right: 0;
+            }
+
+            .swiper-button-prev {
+                left: 0;
+            }
+
+            .swiper-pagination {
+                bottom: 0;
+            }
+
+            @media screen and (min-width: $laptop) {
+                margin-bottom: 1rem;
+          
+                .swiper-button-next {
+                    right: -1rem;
+                }
+
+                .swiper-button-prev {
+                    left: -1rem;
+                }
+
+                .swiper-pagination {
+
+                    bottom: 0;
+                }
+            }
+
+            .swiper-slide {
+                height: auto;
+            }
+
+
+
+
         }
 
-        .swiper-button-next {
-            right: 0;
+        &__logo {
+            max-width: 180px;
+            margin: 0 auto;
+            @media screen and (min-width: $laptop) {
+                max-width: unset;
+                padding: 0 0.5rem;
+            }
         }
 
-        .swiper-button-prev {
-            left: 0;
-        }
-
-        .swiper-pagination {
-            
-            bottom: 0;
-        }
     }
 
     .video-section {
@@ -74,6 +114,13 @@
             .svg-code {
                 height: 4rem;
                 width: 4rem;
+            }
+        }
+
+        &__cta {
+            margin-top: 1.5rem;
+            @media screen and (min-width: $laptop) {
+                margin-top: 2rem;
             }
         }
     }

@@ -3,7 +3,7 @@ $hero = $isPTArchive ? get_field('hero', $post_type) : get_field('hero', $post_i
 if(empty($hero) || $hero['style'] == 'none') return;
 
 $feat_img_id = $isPTArchive ? get_field('feat_img', $post_type)['ID'] : get_post_thumbnail_id($post_id);
-$feat_img = getIMG($feat_img_id, 'xl', true);
+$feat_img = getIMG($feat_img_id, 'xxl', true);
 
 $classList = array('hero', 'hero--'.$hero['style']);
 if(!empty($feat_img)) $classList[] = 'lazy';

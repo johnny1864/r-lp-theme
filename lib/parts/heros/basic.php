@@ -21,17 +21,25 @@
 <?php if($hero['usps']) : ?>
 <div class="hero__usps relative">
     <div class="container">
-        <div class="hero__usps--wrapper flex flex-col md:flex-row justify-center align-center">
-            <?php foreach($hero['usps'] as $usp) : ?>
-                <div class="hero__usps--block text-center">
-                    <div class="hero__usps--icon">
-                        <?php echo getIMG($usp['icon']['ID']); ?>
+        <div class="hero__usps--wrapper swiper">
+            <div class="swiper-wrapper">
+                <?php foreach ($hero['usps'] as $usp) : ?>
+                    <div class="hero__usps--block swiper-slide text-center">
+                        <div class="hero__usps--icon">
+                            <?php echo getIMG($usp['icon']['ID']); ?>
+                        </div>
+                        <div class="hero__usps--text">
+                            <?php echo $usp['text']; ?>
+                        </div>
                     </div>
-                    <div class="hero__usps--text">
-                        <?php echo $usp['text']; ?>
-                    </div>
-                </div>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            </div>
+            <!-- Arrows -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- Dots -->
+            <div class="swiper-pagination"></div>
         </div>
     </div>
     <?php echo getSVG('bottom-curve'); ?>

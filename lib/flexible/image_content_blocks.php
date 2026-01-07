@@ -11,6 +11,11 @@ $attr = buildAttr( array( 'id' => $id, 'class' => $classList ) );
 <?php if ( $blocks ) : ?>
 	<section <?php echo $attr; ?>>
 		<div class="container">
+			<?php if(!empty($float_image)) : ?>
+				<div class="image-content-blocks__float-image image-content-blocks__float-image--top mob-only">
+					<?php echo getIMG($float_image['ID']); ?>
+				</div>
+			<?php endif; ?>
             <div class="section-header">
                 <div class="section-header__content text-center">
                     <?php if ( ! empty( $sec_heading ) ) : ?>
@@ -28,7 +33,7 @@ $attr = buildAttr( array( 'id' => $id, 'class' => $classList ) );
             </div>
 			<div class="image-content-blocks__wrapper relative">
 				<?php if(!empty($float_image)) : ?>
-					<div class="image-content-blocks__float-image">
+					<div class="image-content-blocks__float-image desk-only">
 						<?php echo getIMG($float_image['ID']); ?>
 					</div>
 				<?php endif; ?>

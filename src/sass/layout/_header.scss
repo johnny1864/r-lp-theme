@@ -46,8 +46,7 @@
         z-index: 999;
         border-bottom: 1px solid transparent;
         transition: background .15s ease, box-shadow .15s ease, border-color .15s ease;
-        box-shadow: 50px 0 50px rgba($color: $teal, $alpha: 0.80);
-
+       
         &::before {
             content: "";
             display: block;
