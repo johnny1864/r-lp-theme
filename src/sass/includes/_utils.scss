@@ -312,3 +312,13 @@
         padding-bottom: 0rem;
     }
 }
+
+@media screen and (min-width: $tablet) {
+    .md\:block{
+        display: block !important;
+    }
+
+    .md\:inline-block{
+        display: inline-block !important;
+    }
+}

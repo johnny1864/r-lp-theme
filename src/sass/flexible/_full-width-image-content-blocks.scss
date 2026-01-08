@@ -12,6 +12,12 @@
         .mobile-cta {
             margin-top: 1.5rem;
         }
+        .btn {
+            @media screen and (min-width: $laptop){
+                margin-top: 1.5rem;
+            }
+            
+        }
 
         .col {
                 &--content {
@@ -159,7 +165,7 @@
         @media screen and (max-width: 560px) {
             font-size: 0.9rem;
             &--title {
-                font-weight: 1.3rem;
+                font-size: 1.25rem;
             }
         }
     }

@@ -12,7 +12,7 @@ $attr = buildAttr( array( 'id' => $id, 'class' => $classList ) );
 
 			<!-- Mobile Intro -->
 			<div class="full-width-image-content-blocks__block--mobile md:hidden">
-				<div class="section-padding-bottom">
+				<div class="section-padding-bottom container">
 					<hr>
 				</div>
 				<div class="flex mobile-row">

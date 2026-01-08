@@ -549,7 +549,7 @@ jQuery(document).ready(function ($) {
       },
       pagination: {
         el: ".logos-slider__wrapper .swiper-pagination",
-        clickable: true,
+        clickable: false,
       },
       breakpoints: {
         640: {
@@ -596,7 +596,7 @@ jQuery(document).ready(function ($) {
           },
           pagination: {
             el: ".hero__usps--wrapper .swiper-pagination",
-            clickable: true,
+            clickable: false,
           }
         });
       } else if (window.innerWidth > 767 && uspSwiper) {

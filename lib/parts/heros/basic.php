@@ -7,10 +7,11 @@
             <div class="hero__content"><?php echo $hero['content'];  ?></div>
             <?php endif; ?>
         </div>
-        <?php echo getSVG('curve'); ?>
+       
     </div>
+     <?php echo getSVG('curve'); ?>
     <?php if($hero['float_image']) : ?>
-        <div class="hero__float-image" >
+        <div class="hero__float-image desk-only" >
             <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
             <?php echo getIMG($hero['float_image']['ID']); ?>
             </div>
@@ -35,11 +36,11 @@
                 <?php endforeach; ?>
             </div>
             <!-- Arrows -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev mob-only"></div>
+            <div class="swiper-button-next mob-only"></div>
 
             <!-- Dots -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination mob-only"></div>
         </div>
     </div>
     <?php echo getSVG('bottom-curve'); ?>

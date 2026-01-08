@@ -44,17 +44,19 @@
         left: 0;
         height: 100%;
         width: 100%;
-        background-color: rgba($color: $xdgray, $alpha: 0.3);
+        background-color: rgba($color: $xdgray, $alpha: 0.6);
+        @media screen and (min-width: $laptop){
+            background-color: rgba($color: $xdgray, $alpha: 0.3);
+        }
     }
 
     .container {
-        padding: 3rem 0 0;
+        padding: 3rem 0 4rem;
         z-index: 2;
         line-height: 1.2;
 
         @media screen and (min-width: $laptop) {
             max-width: 960px;
-            padding: 3rem 0 4rem;
         }
 
         @media screen and (min-width: $desktop_lg) {
